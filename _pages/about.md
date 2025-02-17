@@ -28,7 +28,10 @@ For more details about my work, please explore my projects and related publicati
 <div id="work_experience">
   <h1>Work Experience</h1>
   <div>
-    <p style="font-size:20px;"><b>Deep Learning Researcher </b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <em>December, 2024 - Present</em></p>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="font-size: 20px; font-weight: bold; margin: 0;">Deep Learning Researcher</p>
+        <p style="font-size: 18px; font-style: italic; margin: 0;">December, 2024 - Present</p>
+    </div>
     <div class="archive__proj__row">
       <div class="archive__proj__right">
         <p>
@@ -45,7 +48,10 @@ For more details about my work, please explore my projects and related publicati
   </div>
 
   <div>
-    <p style="font-size:20px;"><b>Applied Scientist II Intern </b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <em>August, 2023 - December, 2023</em></p>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="font-size: 20px; font-weight: bold; margin: 0;">Applied Scientist II Intern</p>
+        <p style="font-size: 18px; font-style: italic; margin: 0;">August, 2023 - December, 2023</p>
+    </div>
     <div class="archive__proj__row">
       <div class="archive__proj__right">
         <p>
@@ -62,7 +68,10 @@ For more details about my work, please explore my projects and related publicati
   </div>
 
   <div>
-    <p style="font-size:20px;"><b>Software Developer </b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <em>October, 2018 - December, 2020</em></p>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="font-size: 20px; font-weight: bold; margin: 0;">Software Developer</p>
+        <p style="font-size: 18px; font-style: italic; margin: 0;">October, 2018 - December, 2020</p>
+    </div>
     <div class="archive__proj__row">
       <div class="archive__proj__right">
         <p>
