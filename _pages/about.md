@@ -34,7 +34,7 @@ For more details about my work, please explore my projects and related publicati
     </div>
     <div class="archive__proj__row">
       <div class="archive__proj__right">
-        <p>
+        <p style="text-align: justify;">
         <b>Enhancing AI-driven content generation with vision-language models</b>
         <br>Developed and optimized vision-language models for AI-driven content generation, improving image aesthetics, user engagement, and system efficiency. Achieved state-of-the-art advancements in aesthetic assessment, instruction clarity, and model serving performance through advanced fine-tuning and optimization techniques.
         </p>
@@ -54,7 +54,7 @@ For more details about my work, please explore my projects and related publicati
     </div>
     <div class="archive__proj__row">
       <div class="archive__proj__right">
-        <p>
+        <p style="text-align: justify;">
         <b>Trio: Enhancing model performance through co-purchased product-integration</b>
         <br>Built a deep learning model to curate advertisements tailored to customers, enhancing the alignment between ads and customers by <b> 3% across 21 Amazon marketplaces</b>. Implemented five novel features and employed multi-objective training techniques to optimize the model's overall performance.
         </p>
@@ -74,7 +74,7 @@ For more details about my work, please explore my projects and related publicati
     </div>
     <div class="archive__proj__row">
       <div class="archive__proj__right">
-        <p>
+        <p style="text-align: justify;">
         <b>Enhancing search ranking and personalization for higher engagement and revenue impact</b>
         <br>Developed an intelligent search system that personalizes address and point of interest (POI) retrieval by leveraging user attributes, history, and preferences, improving engagement with a <b>21.4% increase in CTR and a 5% reduction in search abandonment</b>. Enhanced monetization by integrating intent-based advertisements, <b>driving $35K in revenue within two months</b>. To support scalability, built a microservices-based streaming platform serving 15K IoT devices and implemented a distributed data pipeline for efficient data validation and sanitization, <b>reducing manual effort by 30%</b>.
         </p>
@@ -93,7 +93,7 @@ For more details about my work, please explore my projects and related publicati
 
   <div class="archive__proj__row">
     <div class="archive__proj__right">
-      <p>
+      <p style="text-align: justify;">
       <b><a href="https://ieeexplore.ieee.org/document/10659717" target="_blank">RLocator: Reinforcement Learning for Bug Localization</a></b>
       <br>Reinforcement Learning agent designed to localize bugs by learning from developer feedback and analyzing bug reports.
       </p>
@@ -108,7 +108,7 @@ For more details about my work, please explore my projects and related publicati
 
   <div class="archive__proj__row">
     <div class="archive__proj__right">
-      <p>
+      <p style="text-align: justify;">
       <b><a href="https://arxiv.org/abs/2407.17631" target="_blank">BLAZE: Cross-Language and Cross-Project Bug Localization via Dynamic Chunking and Hard Example Learning</a></b>
       <br>BLAZE is a hybrid retrieval system that integrates syntactic and semantic search, powered by an embedding model trained with in-batch hard example mining. It outperforms OpenAI's generation 3 embedding model by up to 38% in bug localization tasks.
       </p>
@@ -123,7 +123,7 @@ For more details about my work, please explore my projects and related publicati
 
   <div class="archive__proj__row">
     <div class="archive__proj__right">
-      <p>
+      <p style="text-align: justify;">
       <b><a href="https://ieeexplore.ieee.org/abstract/document/10587162" target="_blank">Revisiting the Performance of Deep Learning-Based Vulnerability Detection on Realistic Datasets</a></b>
       <br>We demonstrated that the performance of existing vulnerability detection models lacks generalizability due to a bias in the dataset curation pipeline. To address this issue, we proposed a new dataset curation technique and evaluated six different models, including CodeLlama and Mixtral. Our results show that models trained on the newly curated dataset exhibit a 30% improvement in generalization performance.
       </p>
@@ -138,7 +138,7 @@ For more details about my work, please explore my projects and related publicati
 
   <div class="archive__proj__row">
     <div class="archive__proj__right">
-      <p>
+      <p style="text-align: justify;">
       <b><a href="https://dl.acm.org/doi/abs/10.1145/3643787.3648028" target="_blank">Aligning Programming Language and Natural Language: Exploring Design Choices in Multi-Modal Transformer-Based Embedding for Bug Localization</a></b>
       <br>We evaluated 32 different embedding-based models to determine the most effective training technique for developing embedding models for source code. Our analysis revealed that adversarial techniques produce more robust and generalizable models.
       </p>
