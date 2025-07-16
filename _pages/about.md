@@ -109,7 +109,7 @@ For more details about my work, please explore my projects and related publicati
   <div class="archive__proj__row">
     <div class="archive__proj__right">
       <p style="text-align: justify;">
-      <b><a href="https://arxiv.org/abs/2407.17631" target="_blank">BLAZE: Cross-Language and Cross-Project Bug Localization via Dynamic Chunking and Hard Example Learning</a></b>
+      <b><a href="https://doi.org/10.1109/TSE.2025.3579574" target="_blank">BLAZE: Cross-Language and Cross-Project Bug Localization via Dynamic Chunking and Hard Example Learning</a></b>
       <br>BLAZE is a hybrid retrieval system that integrates syntactic and semantic search, powered by an embedding model trained with in-batch hard example mining. It outperforms OpenAI's generation 3 embedding model by up to 38% in bug localization tasks.
       </p>
     </div>
@@ -164,7 +164,7 @@ For more details about my work, please explore my projects and related publicati
       <b class="publication-title">BLAZE: Cross-Language and Cross-Project Bug Localization via Dynamic Chunking and Hard Example Learning</b>
       <b class="highlight-author">Partha Chakraborty</b>, 
       <span class="other-authors">Mahmoud Alfadel, and Meiyappan Nagappan</span>
-      <br><span class="venue-year">Under Review, 2025.</span>  
+      <br><span class="venue-year">IEEE Transactions on Software Engineering (<b>TSE</b>), 2025.</span>  
     </p>
     <p class="publication">
       <b class="publication-title">Rlocator: Reinforcement learning for bug localization</b>
