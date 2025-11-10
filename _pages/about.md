@@ -6,8 +6,9 @@ redirect_from:
   - /about/
   - /about.html
 ---
+I am an Applied Scientist at Coalition Inc., where I focus on building agentic platform that leverage internal knowledge and collaborative intelligence for enterprise applications. My work centers on designing enterprise scale knowledge platform, LLM-driven solutions that integrate reasoning, automation, and data understanding to enhance decision-making and customer intelligence.
 
-I am a Deep Learning Researcher at Huawei Canada, specializing in Vision-Language models within the AI-Generated Content Group. My work focuses on building accurate and generalizable Multi-Modal Language Models (MLLM) that seamlessly integrate visual and textual understanding for real-world applications.
+Previously, I was a Deep Learning Researcher at Huawei Canada, specializing in Vision-Language models within the AI-Generated Content Group. My work focuses on building accurate and generalizable Multi-Modal Language Models (MLLM) that seamlessly integrate visual and textual understanding for real-world applications.
 
 Before this, I completed my Ph.D. at the University of Waterloo, where I developed machine learning techniques to detect software bugs directly from source code. Using a combination of Reinforcement Learning and language modeling, I created AI-driven solutions to identify bugs/vulnerabilities with high precision.
 
@@ -19,7 +20,7 @@ I am broadly interested in building applications using large language models (LL
 
   * **Search & Ranking Systems** – Developing learning-to-rank models and optimizing multi-modal deep learning models for applications like search, recommendation, and ad personalization.
   * **Vision-Language & Multi-Modal AI** – Enhancing model performance for image-text understanding, instruction generation, and multi-modal reasoning using VLMs and MLLMs.
-To learn more about my work, please check out my projects and relevant publications.
+  * **Multi-Agent Collaboration Systems** – Building enterprise-scale, data-driven agentic system that integrate internal knowledge bases, automate reasoning across heterogeneous data, and enable collaborative AI workflows for operational efficiency and customer intelligence.
   * **Software Engineering & Bug Localization** – Applying LLMs and reinforcement learning for bug localization, software vulnerability detection, and ranking of source code files.
 
 For more details about my work, please explore my projects and related publications.
@@ -29,8 +30,30 @@ For more details about my work, please explore my projects and related publicati
   <h1>Work Experience</h1>
   <div>
     <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="font-size: 20px; font-weight: bold; margin: 0;">Applied Scientist </p>
+        <p style="font-size: 18px; font-style: italic; margin: 0;">May, 2026 - Present</p>
+    </div>
+    <div class="archive__proj__row">
+      <div class="archive__proj__right">
+        <p style="text-align: justify;">
+        <b>Advancing Agentic Knowledge Platforms for Customer Success</b>
+        <br>Built an enterprise knowledge platform with automated ingestion, intelligent tagging, and agentic enrichment to power a Customer 360 system and chatbot for improved support efficiency. Achieved 30% reduction in human agent workload, 2-day faster resolution, and 23% higher customer satisfaction.
+        </p>
+      </div>
+      <div class="archive__proj__left">
+        <div>
+            <img src="images/coalition.png"> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
         <p style="font-size: 20px; font-weight: bold; margin: 0;">Deep Learning Researcher</p>
-        <p style="font-size: 18px; font-style: italic; margin: 0;">December, 2024 - Present</p>
+        <p style="font-size: 18px; font-style: italic; margin: 0;">December, 2024 - April, 2026</p>
     </div>
     <div class="archive__proj__row">
       <div class="archive__proj__right">
