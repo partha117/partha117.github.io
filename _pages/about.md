@@ -1,43 +1,44 @@
 ---
 permalink: /
-title: "Welcome to Partha's Homepage!"
+title: "Partha Chakraborty"
+description: "Applied Scientist building retrieval and ranking systems at scale. Work on hybrid search, bi-encoder training, and production ML evaluation at Coalition Inc."
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-I am an Applied Scientist at Coalition Inc., where I focus on building agentic platform that leverage internal knowledge and collaborative intelligence for enterprise applications. My work centers on designing enterprise scale knowledge platform, LLM-driven solutions that integrate reasoning, automation, and data understanding to enhance decision-making and customer intelligence.
+I build retrieval and ranking systems that work at scale. My work sits at the intersection of classical information retrieval and modern neural approaches: fine-tuning embedding models, designing hybrid search pipelines, and building the evaluation infrastructure that tells you whether search is actually getting better.
 
-Previously, I was a Deep Learning Researcher at Huawei Canada, specializing in Vision-Language models within the AI-Generated Content Group. My work focuses on building accurate and generalizable Multi-Modal Language Models (MLLM) that seamlessly integrate visual and textual understanding for real-world applications.
+At Coalition Inc., I work on enterprise search and knowledge retrieval: a production hybrid search system combining dense vector and text indexes across tens of thousands of sources, a fine-tuned bi-encoder for semantic entity resolution, and an evaluation platform covering both classical search metrics and LLM-based quality signals. Before that, I fine-tuned vision-language models at Huawei Canada and built a learning-to-rank system for ad retrieval across 21 Amazon marketplaces.
 
-Before this, I completed my Ph.D. at the University of Waterloo, where I developed machine learning techniques to detect software bugs directly from source code. Using a combination of Reinforcement Learning and language modeling, I created AI-driven solutions to identify bugs/vulnerabilities with high precision.
+My research at the University of Waterloo explored the same problem space from the academic side. RLocator applied reinforcement learning to learning-to-rank. BLAZE used hybrid retrieval with Reciprocal Rank Fusion for zero-shot code search. The embedding design work investigated what training strategies actually produce better bi-encoders. Adversarial techniques turned out to matter more than architecture choices.
 
-I also worked as an Applied Scientist II Intern at Amazon Ads, focusing on ranking models and ad targeting. This involved optimizing models to enhance ad relevance and user engagement.
-
-Research Interest
+Research Interests
 ======
-I am broadly interested in building applications using large language models (LLMs), multi-modal large language models (MLLMs), and vision-language models (VLMs), particularly in:
 
-  * **Search & Ranking Systems** – Developing learning-to-rank models and optimizing multi-modal deep learning models for applications like search, recommendation, and ad personalization.
-  * **Vision-Language & Multi-Modal AI** – Enhancing model performance for image-text understanding, instruction generation, and multi-modal reasoning using VLMs and MLLMs.
-  * **Multi-Agent Collaboration Systems** – Building enterprise-scale, data-driven agentic system that integrate internal knowledge bases, automate reasoning across heterogeneous data, and enable collaborative AI workflows for operational efficiency and customer intelligence.
-  * **Software Engineering & Bug Localization** – Applying LLMs and reinforcement learning for bug localization, software vulnerability detection, and ranking of source code files.
+**Search & Ranking Systems**
+Learning-to-rank, hybrid retrieval, dense and sparse signal fusion, and relevance evaluation. Interested in how classical IR techniques and neural approaches complement each other, and in evaluation frameworks that measure retrieval quality rigorously rather than by proxy metrics.
 
-For more details about my work, please explore my projects and related publications.
+**Representation Learning for Retrieval**
+Embedding model training across bi-encoder and cross-encoder architectures, hard negative mining strategies, and domain adaptation. Particularly interested in cases where off-the-shelf embeddings fail and what it takes to fix them.
+
+**Production AI Systems**
+LLM-based agents, RAG pipelines, multimodal models, and the evaluation and safety infrastructure that makes them trustworthy at scale. Search is often the retrieval backbone of these systems, but the system-level challenges go beyond retrieval quality alone.
 
 
 <div id="work_experience">
   <h1>Work Experience</h1>
   <div>
     <div style="display: flex; justify-content: space-between; align-items: center;">
-        <p style="font-size: 20px; font-weight: bold; margin: 0;">Applied Scientist </p>
-        <p style="font-size: 18px; font-style: italic; margin: 0;">May, 2026 - Present</p>
+        <p style="font-size: 20px; font-weight: bold; margin: 0;">Applied Scientist</p>
+        <p style="font-size: 18px; font-style: italic; margin: 0;">April 2025 – Present</p>
     </div>
     <div class="archive__proj__row">
       <div class="archive__proj__right">
         <p style="text-align: justify;">
-        <b>Advancing Agentic Knowledge Platforms for Customer Success</b>
-        <br>Built an enterprise knowledge platform with automated ingestion, intelligent tagging, and agentic enrichment to power a Customer 360 system and chatbot for improved support efficiency. Achieved 30% reduction in human agent workload, 2-day faster resolution, and 23% higher customer satisfaction.
+        <b>Enterprise Search and Retrieval at Scale</b>
+        <br>Built the search and knowledge retrieval infrastructure powering Coalition's enterprise AI platform. Core work includes a production hybrid search system combining Milvus dense vector indexes and text indexes across ~16K sources, a fine-tuned sentence transformer bi-encoder for semantic entity resolution trained with online hard negative mining, and a dual-layer evaluation platform tracking classical search metrics (MAP, MRR, nDCG, Hit@K) alongside LLM-based quality signals including faithfulness, completeness, and context relevance.
+        <br><br>Also built an unsupervised intent discovery pipeline using embeddings, UMAP, and HDBSCAN to surface emerging user issues from unstructured conversations — moving beyond rigid predefined categories to identify real product gaps. The platform monitors 50+ agents and 30+ models with continuous evaluation runs every three hours, enabling regression detection and A/B testing across LLM providers.
         </p>
       </div>
       <div class="archive__proj__left">
@@ -48,18 +49,16 @@ For more details about my work, please explore my projects and related publicati
     </div>
   </div>
 
-
-
   <div>
     <div style="display: flex; justify-content: space-between; align-items: center;">
-        <p style="font-size: 20px; font-weight: bold; margin: 0;">Deep Learning Researcher</p>
-        <p style="font-size: 18px; font-style: italic; margin: 0;">December, 2024 - April, 2026</p>
+        <p style="font-size: 20px; font-weight: bold; margin: 0;">Deep Learning Engineer</p>
+        <p style="font-size: 18px; font-style: italic; margin: 0;">November 2024 – April 2025</p>
     </div>
     <div class="archive__proj__row">
       <div class="archive__proj__right">
         <p style="text-align: justify;">
-        <b>Enhancing AI-driven content generation with vision-language models</b>
-        <br>Developed and optimized vision-language models for AI-driven content generation, improving image aesthetics, user engagement, and system efficiency. Achieved state-of-the-art advancements in aesthetic assessment, instruction clarity, and model serving performance through advanced fine-tuning and optimization techniques.
+        <b>Vision-Language Models for AI-Generated Content</b>
+        <br>Fine-tuned a vision-language model to generate photography composition instructions, achieving a 3% improvement in aesthetic classification accuracy over state-of-the-art. Improved model alignment through mixed preference optimization, increasing user acceptance by 10% in end-user evaluation. Reduced inference pipeline latency by 35% through dynamic quantization, enabling efficient large-scale deployment of the multimodal system.
         </p>
       </div>
       <div class="archive__proj__left">
@@ -73,13 +72,13 @@ For more details about my work, please explore my projects and related publicati
   <div>
     <div style="display: flex; justify-content: space-between; align-items: center;">
         <p style="font-size: 20px; font-weight: bold; margin: 0;">Applied Scientist II Intern</p>
-        <p style="font-size: 18px; font-style: italic; margin: 0;">August, 2023 - December, 2023</p>
+        <p style="font-size: 18px; font-style: italic; margin: 0;">September 2023 – December 2023</p>
     </div>
     <div class="archive__proj__row">
       <div class="archive__proj__right">
         <p style="text-align: justify;">
-        <b>Trio: Enhancing model performance through co-purchased product-integration</b>
-        <br>Built a deep learning model to curate advertisements tailored to customers, enhancing the alignment between ads and customers by <b> 3% across 21 Amazon marketplaces</b>. Implemented five novel features and employed multi-objective training techniques to optimize the model's overall performance.
+        <b>Learning-to-Rank for Ad Retrieval</b>
+        <br>Built a large-scale learning-to-rank model for ad retrieval across 21 Amazon marketplaces, improving ad-customer alignment by <b>3%</b> through five novel engineered features and multi-objective ranking optimization. Designed ranking strategies that balanced competing signals across a high-traffic production advertising system.
         </p>
       </div>
       <div class="archive__proj__left">
@@ -92,14 +91,15 @@ For more details about my work, please explore my projects and related publicati
 
   <div>
     <div style="display: flex; justify-content: space-between; align-items: center;">
-        <p style="font-size: 20px; font-weight: bold; margin: 0;">Software Developer</p>
-        <p style="font-size: 18px; font-style: italic; margin: 0;">October, 2018 - December, 2020</p>
+        <p style="font-size: 20px; font-weight: bold; margin: 0;">Software Engineer</p>
+        <p style="font-size: 18px; font-style: italic; margin: 0;">November 2018 – September 2020</p>
     </div>
     <div class="archive__proj__row">
       <div class="archive__proj__right">
         <p style="text-align: justify;">
-        <b>Enhancing search ranking and personalization for higher engagement and revenue impact</b>
-        <br>Developed an intelligent search system that personalizes address and point of interest (POI) retrieval by leveraging user attributes, history, and preferences, improving engagement with a <b>21.4% increase in CTR and a 5% reduction in search abandonment</b>. Enhanced monetization by integrating intent-based advertisements, <b>driving $35K in revenue within two months</b>. To support scalability, built a microservices-based streaming platform serving 15K IoT devices and implemented a distributed data pipeline for efficient data validation and sanitization, <b>reducing manual effort by 30%</b>.
+        <b>Search, Personalization, and Platform Infrastructure</b>
+        <br>Built a personalized search system for address and point-of-interest retrieval, incorporating user attributes, history, and preferences into ranking. Achieved a <b>21.4% increase in CTR</b> and a <b>5% reduction in search abandonment</b>. Integrated intent-based ad placement into the search experience, generating <b>$35K in revenue within two months</b> of launch.
+        <br><br>Also built a microservices-based streaming platform serving ~15K IoT devices using Redis and Elasticsearch, and a distributed data pipeline for validation and sanitization that reduced manual processing effort by 30%.
         </p>
       </div>
       <div class="archive__proj__left">
@@ -117,61 +117,61 @@ For more details about my work, please explore my projects and related publicati
   <div class="archive__proj__row">
     <div class="archive__proj__right">
       <p style="text-align: justify;">
-      <b><a href="https://ieeexplore.ieee.org/document/10659717" target="_blank">RLocator: Reinforcement Learning for Bug Localization</a></b>
-      <br>Reinforcement Learning agent designed to localize bugs by learning from developer feedback and analyzing bug reports.
+      <b><a href="https://doi.org/10.1109/TSE.2025.3579574" target="_blank">BLAZE: Hybrid Retrieval for Bug Localization</a></b>
+      <br>A zero-shot hybrid retrieval system combining dense and sparse signals via Reciprocal Rank Fusion. The embedding model was trained with in-batch hard negative mining. Outperforms OpenAI's third-generation embedding model by up to 38% on bug localization benchmarks — zero-shot, no task-specific fine-tuning.
+      <br><em>IEEE Transactions on Software Engineering, 2025</em>
       </p>
     </div>
     <div class="archive__proj__left">
       <div>
-          <img  src="images/rlocator.png"> 
+          <img src="images/blaze.png"> 
       </div>
     </div>
-    <div class="archive__proj_hgap">
   </div>
 
   <div class="archive__proj__row">
     <div class="archive__proj__right">
       <p style="text-align: justify;">
-      <b><a href="https://doi.org/10.1109/TSE.2025.3579574" target="_blank">BLAZE: Cross-Language and Cross-Project Bug Localization via Dynamic Chunking and Hard Example Learning</a></b>
-      <br>BLAZE is a hybrid retrieval system that integrates syntactic and semantic search, powered by an embedding model trained with in-batch hard example mining. It outperforms OpenAI's generation 3 embedding model by up to 38% in bug localization tasks.
+      <b><a href="https://ieeexplore.ieee.org/document/10659717" target="_blank">RLocator: Reinforcement Learning for Learning-to-Rank</a></b>
+      <br>A learning-to-rank model using actor-critic reinforcement learning to rank source code files given a bug report. Trained on developer feedback signals rather than static labels. Outperforms BM25 and neural baselines by 13% MAP.
+      <br><em>IEEE Transactions on Software Engineering, 2024</em>
       </p>
     </div>
     <div class="archive__proj__left">
       <div>
-          <img  src="images/blaze.png"> 
+          <img src="images/rlocator.png"> 
       </div>
     </div>
-    <div class="archive__proj_hgap">
   </div>
 
   <div class="archive__proj__row">
     <div class="archive__proj__right">
       <p style="text-align: justify;">
-      <b><a href="https://ieeexplore.ieee.org/abstract/document/10587162" target="_blank">Revisiting the Performance of Deep Learning-Based Vulnerability Detection on Realistic Datasets</a></b>
-      <br>We demonstrated that the performance of existing vulnerability detection models lacks generalizability due to a bias in the dataset curation pipeline. To address this issue, we proposed a new dataset curation technique and evaluated six different models, including CodeLlama and Mixtral. Our results show that models trained on the newly curated dataset exhibit a 30% improvement in generalization performance.
+      <b><a href="https://dl.acm.org/doi/abs/10.1145/3643787.3648028" target="_blank">Embedding Design Choices for Code-Language Retrieval</a></b>
+      <br>Evaluated 32 embedding model configurations to identify what training strategies matter most for code-text retrieval. Key finding: adversarial training techniques produce more robust and generalizable models than architecture changes alone.
+      <br><em>NLBSE Workshop, ACM/IEEE, 2024</em>
       </p>
     </div>
     <div class="archive__proj__left">
       <div>
-          <img  src="images/realvul.png"> 
+          <img src="images/embedding.png"> 
       </div>
     </div>
-    <div class="archive__proj_hgap">
   </div>
 
   <div class="archive__proj__row">
     <div class="archive__proj__right">
       <p style="text-align: justify;">
-      <b><a href="https://dl.acm.org/doi/abs/10.1145/3643787.3648028" target="_blank">Aligning Programming Language and Natural Language: Exploring Design Choices in Multi-Modal Transformer-Based Embedding for Bug Localization</a></b>
-      <br>We evaluated 32 different embedding-based models to determine the most effective training technique for developing embedding models for source code. Our analysis revealed that adversarial techniques produce more robust and generalizable models.
+      <b><a href="https://ieeexplore.ieee.org/abstract/document/10587162" target="_blank">Vulnerability Detection on Realistic Datasets</a></b>
+      <br>Showed that existing vulnerability detection models fail to generalize due to dataset curation bias. Proposed a new curation technique and benchmarked six models including CodeLlama and Mixtral. Models trained on the corrected dataset showed 30% improvement in generalization.
+      <br><em>IEEE Transactions on Software Engineering, 2024</em>
       </p>
     </div>
     <div class="archive__proj__left">
       <div>
-          <img  src="images/embedding.png"> 
+          <img src="images/realvul.png"> 
       </div>
     </div>
-    <div class="archive__proj_hgap">
   </div>
 </div>
 
@@ -258,7 +258,7 @@ For more details about my work, please explore my projects and related publicati
       <ul>
   	    <li>Major: Software Engineering</li>
   	    <li>Advisor: <a href="https://rifatshahriyar.github.io/" target="_blank">Rifat Shahriyar</a></li>
-	      <li>Thesis: An Empirical Study on the Growth of New Languages in  Stack Overflow</li>
+	      <li>Thesis: An Empirical Study on the Growth of New Languages in Stack Overflow</li>
       </ul> 
     </p>
 </div>
@@ -290,19 +290,30 @@ For more details about my work, please explore my projects and related publicati
 </div>
 
 
-	
-	
 <div id="skills">
   <h1>Skills</h1>
   <div>
     <ul style="line-height: 1.8;">
-      <li><b>Language:</b> Java, Python, C++, C</li>
-      <li><b>Framework:</b> PyTorch, TensorFlow, Android, Django, Onnx</li>
-      <li><b>Databases:</b> MySQL, PostgreSQL, Oracle, SQLite, Pinecone, Elastic Search, MilVus</li>
-      <li><b>MLOps Tools:</b> Weights & Biases, MLflow</li>
-      <li><b>Tools:</b> Android Studio, Google Colab Platform, Apache Spark, Ollama, Slurm</li>
-      <li><b>Cloud:</b> AWS, Google BigQuery, SageMaker</li>
-      <li><b>Others:</b> LATEX, Linux, Shell Script, Git</li>
+      <li><b>Languages:</b> Python, Java, C++, C</li>
+      <li><b>Frameworks:</b> PyTorch, TensorFlow, Sentence Transformers, ONNX, LiteLLM, Hugging Face</li>
+      <li><b>Search & Retrieval:</b> Hybrid Search, BM25, Dense Retrieval, RRF, Learning to Rank, Bi-Encoder, Cross-Encoder, Hard Negative Mining, RAG</li>
+      <li><b>Vector & Databases:</b> Milvus, Elasticsearch, Snowflake, PostgreSQL, MySQL</li>
+      <li><b>Evaluation:</b> MAP, MRR, nDCG, Hit@K, Faithfulness, Context Relevance, Completeness</li>
+      <li><b>Cloud & Infra:</b> AWS, SageMaker, Google BigQuery, Apache Spark, Docker</li>
+      <li><b>Monitoring:</b> EvidentlyAI, Datadog, Prefect</li>
+      <li><b>Tools:</b> Git, Linux, Shell Script</li>
+    </ul>
+  </div>
+</div>
+
+<div id="notes">
+  <h1>Notes</h1>
+  <div>
+    <p>Occasional writing on things I have built or figured out the hard way.</p>
+    <ul>
+      {%- for post in site.posts -%}
+        <li><a href="{{ post.url }}">{{ post.title }}</a> &ndash; {{ post.date | date: "%b %Y" }}</li>
+      {%- endfor -%}
     </ul>
   </div>
 </div>

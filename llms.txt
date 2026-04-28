@@ -1,0 +1,35 @@
+# Partha Chakraborty
+
+> Applied Scientist building retrieval and ranking systems at scale. Work sits at the intersection of classical information retrieval and modern neural approaches.
+
+## About
+
+Partha Chakraborty is an Applied Scientist at Coalition Inc. (Ontario, Canada), where he builds enterprise search and knowledge retrieval infrastructure. His work covers production hybrid search systems, fine-tuned bi-encoder models for semantic entity resolution, and evaluation platforms that track both classical IR metrics (MAP, MRR, nDCG) and LLM-based quality signals.
+
+Previously: Deep Learning Engineer at Huawei Canada (vision-language models), Applied Scientist II Intern at Amazon Advertising (learning-to-rank across 21 marketplaces), Software Engineer at Dingi Technologies (personalized search and POI retrieval). PhD in Computer Science from the University of Waterloo (2024), specializing in AI with a focus on automated bug localization.
+
+## Research
+
+- **Search & Ranking**: learning-to-rank, hybrid retrieval, dense/sparse signal fusion, relevance evaluation
+- **Representation Learning**: bi-encoder and cross-encoder training, hard negative mining, domain adaptation for embeddings
+- **Production AI Systems**: RAG pipelines, LLM-based agents, evaluation infrastructure
+
+## Selected Work
+
+- **BLAZE** (TSE 2025): zero-shot hybrid retrieval with Reciprocal Rank Fusion and in-batch hard negative mining. Outperforms OpenAI gen-3 embeddings by up to 38% on bug localization benchmarks.
+- **RLocator** (TSE 2024): actor-critic reinforcement learning for learning-to-rank on bug reports. +13% MAP over BM25 and neural baselines.
+- **Embedding Design Choices** (NLBSE 2024): evaluated 32 bi-encoder configurations; adversarial training outperforms architecture changes for code-text retrieval.
+- **Vulnerability Detection on Realistic Datasets** (TSE 2024): dataset curation bias study; corrected dataset improves model generalization by 30%.
+
+## Skills
+
+Python, PyTorch, Sentence Transformers, Milvus, Elasticsearch, hybrid search, BM25, dense retrieval, RRF, bi-encoders, cross-encoders, hard negative mining, RAG, MAP/MRR/nDCG evaluation, AWS, SageMaker, Docker.
+
+## Links
+
+- Homepage: https://parthac.me
+- Google Scholar: https://scholar.google.ca/citations?user=YdI4XmUAAAAJ&hl=en
+- ORCID: https://orcid.org/0000-0001-5965-615X
+- GitHub: https://github.com/partha117
+- LinkedIn: https://linkedin.com/in/partha-chakraborty-28945214a
+- Email: shuvopartho@gmail.com
