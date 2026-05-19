@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 580" width="640" height="580">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 8 3, 0 6" fill="#7f8c9a"/>
+    </marker>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="122%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000018"/>
+    </filter>
+  </defs>
+
+  <rect width="640" height="580" fill="#ffffff"/>
+
+  <!-- ── QUERY ── -->
+  <rect x="220" y="16" width="200" height="44" rx="8" fill="#1d3557" filter="url(#shadow)"/>
+  <text x="320" y="44" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#ffffff">Query</text>
+
+  <!-- arrow: query → parser -->
+  <line x1="320" y1="60" x2="320" y2="80" stroke="#7f8c9a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ── QUERY PARSER ── -->
+  <rect x="140" y="80" width="360" height="50" rx="8" fill="#2c3e50" filter="url(#shadow)"/>
+  <text x="320" y="101" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#ffffff">Query Parser</text>
+  <text x="320" y="119" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#a0b4c8">jurisdiction · as-of date · thresholds · predicates</text>
+
+  <!-- fan-out: parser bottom (320,130) → vertical stem → horizontal bus → 4 drops -->
+  <line x1="320" y1="130" x2="320" y2="147" stroke="#7f8c9a" stroke-width="1.5"/>
+  <line x1="102"  y1="147" x2="538"  y2="147" stroke="#7f8c9a" stroke-width="1.5"/>
+  <line x1="102"  y1="147" x2="102"  y2="162" stroke="#7f8c9a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="247"  y1="147" x2="247"  y2="162" stroke="#7f8c9a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="393"  y1="147" x2="393"  y2="162" stroke="#7f8c9a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="538"  y1="147" x2="538"  y2="162" stroke="#7f8c9a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ── PLANE 1: Lexical ── (x=37, center=102) -->
+  <rect x="37" y="162" width="130" height="108" rx="8" fill="#eaf2fb" stroke="#2980b9" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="102" y="184" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#1d3557">P1: Lexical</text>
+  <text x="102" y="200" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#2980b9">BM25 · SPLADE</text>
+  <text x="102" y="215" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="9"  fill="#666">keyword match</text>
+  <line x1="47"  y1="228" x2="157" y2="228" stroke="#c8dff0" stroke-width="0.75"/>
+  <text x="102" y="244" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="8"  fill="#999" font-style="italic">← Inverted Index</text>
+
+  <!-- ── PLANE 2: Dense ── (x=182, center=247) -->
+  <rect x="182" y="162" width="130" height="108" rx="8" fill="#eaf2fb" stroke="#2980b9" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="247" y="184" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#1d3557">P2: Dense</text>
+  <text x="247" y="200" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#2980b9">BGE-M3 · ColBERT</text>
+  <text x="247" y="215" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="9"  fill="#666">semantic similarity</text>
+  <line x1="192" y1="228" x2="302" y2="228" stroke="#c8dff0" stroke-width="0.75"/>
+  <text x="247" y="244" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="8"  fill="#999" font-style="italic">← Vector Index</text>
+
+  <!-- ── PLANE 3: Graph ── (x=328, center=393) -->
+  <rect x="328" y="162" width="130" height="108" rx="8" fill="#e8f8f5" stroke="#27ae60" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="393" y="184" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#0e6655">P3: Graph</text>
+  <text x="393" y="200" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#27ae60">Citation Graph</text>
+  <text x="393" y="215" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="9"  fill="#666">structural traversal</text>
+  <line x1="338" y1="228" x2="448" y2="228" stroke="#a8e6cf" stroke-width="0.75"/>
+  <text x="393" y="244" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="8"  fill="#999" font-style="italic">← Graph Index</text>
+
+  <!-- ── PLANE 4: Symbolic ── (x=473, center=538) -->
+  <rect x="473" y="162" width="130" height="108" rx="8" fill="#f4ecf7" stroke="#8e44ad" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="538" y="184" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#6c3483">P4: Symbolic</text>
+  <text x="538" y="200" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#8e44ad">Rule Engine</text>
+  <text x="538" y="215" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="9"  fill="#666">logical evaluation</text>
+  <line x1="483" y1="228" x2="593" y2="228" stroke="#d7bde2" stroke-width="0.75"/>
+  <text x="538" y="244" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="8"  fill="#999" font-style="italic">← Fact Table</text>
+
+  <!-- fan-in: 4 drops from plane bottoms → horizontal bus → vertical stem → Fusion -->
+  <line x1="102"  y1="270" x2="102"  y2="285" stroke="#7f8c9a" stroke-width="1.5"/>
+  <line x1="247"  y1="270" x2="247"  y2="285" stroke="#7f8c9a" stroke-width="1.5"/>
+  <line x1="393"  y1="270" x2="393"  y2="285" stroke="#7f8c9a" stroke-width="1.5"/>
+  <line x1="538"  y1="270" x2="538"  y2="285" stroke="#7f8c9a" stroke-width="1.5"/>
+  <line x1="102"  y1="285" x2="538"  y2="285" stroke="#7f8c9a" stroke-width="1.5"/>
+  <line x1="320"  y1="285" x2="320"  y2="300" stroke="#7f8c9a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ── SCORE FUSION ── -->
+  <rect x="180" y="300" width="280" height="50" rx="8" fill="#fef9e7" stroke="#d4ac0d" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="320" y="322" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#7d6608">Score Fusion</text>
+  <text x="320" y="339" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#a07520">learned convex combination · RRF</text>
+
+  <!-- arrow: fusion → reranker -->
+  <line x1="320" y1="350" x2="320" y2="370" stroke="#7f8c9a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="336" y="363" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#bbb">~100 candidates</text>
+
+  <!-- ── DOMAIN-AWARE RERANKER ── -->
+  <rect x="180" y="370" width="280" height="58" rx="8" fill="#fdedec" stroke="#e74c3c" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="320" y="395" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#922b21">Domain-aware Reranker</text>
+  <text x="320" y="413" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#c0392b">cross-encoder + structural features</text>
+
+  <!-- arrow: reranker → calibrator -->
+  <line x1="320" y1="428" x2="320" y2="448" stroke="#7f8c9a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ── CALIBRATED CONFIDENCE ── -->
+  <rect x="180" y="448" width="280" height="54" rx="8" fill="#fef5e7" stroke="#e67e22" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="320" y="473" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#9a5b00">Calibrated Confidence</text>
+  <text x="320" y="490" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#ca7a0a">abstention threshold θ</text>
+
+  <!-- arrow: calibrator → output -->
+  <line x1="320" y1="502" x2="320" y2="522" stroke="#7f8c9a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ── EVIDENCE BUNDLE ── -->
+  <rect x="180" y="522" width="280" height="42" rx="8" fill="#e9f7ef" stroke="#27ae60" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="320" y="549" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#1e8449">Evidence Bundle</text>
+</svg>
