@@ -1,5 +1,5 @@
 ---
-title: "Structure-First Retrieval: The Scientific Case"
+title: "Structure-First Retrieval: The Legal Case"
 date: 2026-05-10
 permalink: /posts/2026/structure-first-retrieval/
 tags:
@@ -14,7 +14,6 @@ The [previous post](/posts/2026/why-hybrid-retrieval-fails/) cataloged six ways 
 ## Recap
 
 The standard hybrid pipeline (BM25 for lexical match, a bi-encoder for dense retrieval, a cross-encoder for reranking) produces wrong-but-confident answers on legal corpora. Six failure modes, all illustrated on 11 U.S.C. § 547 (the Bankruptcy Code's preference action), recur on essentially every corpus with version, jurisdiction, hierarchy, exception, and threshold structure:
-
 1. **Version drift.** Multiple historical versions of a statute coexist in the corpus; no component of the pipeline conditions on effective date.
 2. **The exception you never see.** Chunk boundaries break cross-references, so the rule is retrieved without its qualifying exception.
 3. **Paraphrase loss of load-bearing words.** Embeddings treat "shall" and "may" as near-synonyms; in law they are opposites.
@@ -43,7 +42,7 @@ $$
 \text{BM25}(q, d) = \sum_{i=1}^{m} \text{IDF}(q_i) \cdot \frac{f(q_i, d) \cdot (k_1 + 1)}{f(q_i, d) + k_1 \cdot (1 - b + b \cdot \frac{|d|}{\text{avgdl}})}
 $$
 
-where $f(q_i, d)$ is the term frequency of $q_i$ in $d$, $\|d\|$ is the document length, $\text{avgdl}$ is the average document length, $k_1 \in [1.2, 2.0]$ controls term-frequency saturation, and $b \in [0, 1]$ controls length normalization. The IDF term is
+where $f(q_i, d)$ is the term frequency of $q_i$ in $d$, $\lvert d \rvert$ is the document length, $\text{avgdl}$ is the average document length, $k_1 \in [1.2, 2.0]$ controls term-frequency saturation, and $b \in [0, 1]$ controls length normalization. The IDF term is
 
 $$
 \text{IDF}(q_i) = \log \frac{N - n(q_i) + 0.5}{n(q_i) + 0.5}
@@ -51,7 +50,7 @@ $$
 
 with $N$ the corpus size and $n(q_i)$ the document frequency of $q_i$.
 
-Two observations matter for legal corpora. First, the IDF term rewards rare tokens disproportionately, which is exactly the right inductive bias for legal text: statutory citation tokens ("547(c)(9)"), monetary amounts ("$7,575"), and proper nouns of statutes and agencies are precisely the tokens that should dominate scoring. Second, the saturation function $\frac{f \cdot (k_1 + 1)}{f + k_1 \cdot (\cdot)}$ damps the contribution of common-word repetition, which keeps boilerplate from dominating.
+Two observations matter for legal corpora. First, the IDF term rewards rare tokens disproportionately, which is exactly the right inductive bias for legal text: statutory citation tokens ("547(c)(9)"), monetary amounts ("`$7,575`"), and proper nouns of statutes and agencies are precisely the tokens that should dominate scoring. Second, the saturation function $\frac{f \cdot (k_1 + 1)}{f + k_1 \cdot (\cdot)}$ damps the contribution of common-word repetition, which keeps boilerplate from dominating.
 
 Two non-default choices matter for legal corpora. First, tokenize so that statutory citations and dollar amounts are preserved as single tokens. The string `§547(c)(9)` should not be split, and `$7,575` should not be split. Token preservation alone is responsible for substantial precision gains because it makes IDF rare in the right places. Second, optionally layer SPLADE on top:
 
@@ -224,7 +223,7 @@ where:
 
 The calibrator is fit by logistic regression or isotonic regression to minimize binary cross-entropy on labeled correct/incorrect pairs. Quality is measured by:
 
-- **Expected Calibration Error (ECE):** $\text{ECE} = \sum_{b=1}^{B} \frac{|B_b|}{N} \| \text{acc}(B_b) - \text{conf}(B_b) \|$, where bins are formed by predicted confidence and `acc` is empirical accuracy within the bin.
+- **Expected Calibration Error (ECE):** $\text{ECE} = \sum_{b=1}^{B} \frac{\lvert B_b \rvert}{N} \lvert \text{acc}(B_b) - \text{conf}(B_b) \rvert$, where bins are formed by predicted confidence and `acc` is empirical accuracy within the bin.
 - **Brier score:** $\text{Brier} = \frac{1}{N} \sum_{i=1}^{N} (\hat{p}_i - y_i)^2$, where $y_i \in \{0, 1\}$.
 - **Reliability diagrams:** plot $\text{conf}(B_b)$ against $\text{acc}(B_b)$; on a well-calibrated model they lie on the diagonal.
 
@@ -252,7 +251,7 @@ A practical recipe: set $\theta$ so that on a labeled validation set, selective 
 
 ## Why this dominates hybrid retrieval, formally
 
-Let $R(q)$ denote the set of relevant documents for $q$ and $S(q)$ the set returned by a retrieval system. Recall is $|R \cap S| / |R|$ and precision is $|R \cap S| / |S|$.
+Let $R(q)$ denote the set of relevant documents for $q$ and $S(q)$ the set returned by a retrieval system. Recall is $\lvert R \cap S \rvert / \lvert R \rvert$ and precision is $\lvert R \cap S \rvert / \lvert S \rvert$.
 
 A hybrid pipeline (BM25 + dense + reranker) returns
 
@@ -427,20 +426,6 @@ The expected pattern is that the structural graph (H3 over H2) is the single lar
 
 The ablation is the canonical way to argue, in a publication or an internal review, that the four-plane design is doing real work rather than re-shuffling effort.
 
-## Open questions
-
-A few things remain genuinely open.
-
-How do you scale the symbolic rule library without bottlenecking on human authoring? LLM-assisted rule extraction with human verification is the practical answer, but the verification cost is substantial and the failure-mode analysis of LLM-extracted rules is under-studied.
-
-How should the calibrator handle distribution shift? Statutory amendments, new bulletins, and changing query patterns all shift the joint distribution of features and relevance. Re-calibration cadence and online adaptation are open engineering-and-science problems.
-
-How do you measure relevance when ground truth itself is contested? Legal interpretation is sometimes genuinely ambiguous; the labeling protocol matters. Inter-annotator agreement on legal queries is lower than on web search queries, and benchmarks should report it.
-
-How does this architecture interact with generative LLM-based answer composition? The retrieval system described here outputs an evidence bundle; the LLM is downstream. But the LLM can hallucinate even with perfect retrieval, and the joint system needs joint evaluation. The honest answer is: structure-first retrieval bounds the upstream contribution of error, but the downstream LLM is a separate failure surface.
-
 ## Closing
-
-This is the architecture I built in response to the six failures in the previous post. The four planes (lexical, dense, structural graph, symbolic) carry orthogonal signal, and a learned fusion exploits that orthogonality. Calibrated confidence and abstention turn correctness into a tunable operating point. The math is not exotic. The engineering is real but bounded. The result is a retrieval system that, on legal corpora, dominates hybrid retrieval not by hope but by the structure of the conditional variance of relevance given the score vector.
 
 The next post covers what it takes to actually build this in production: ingestion pipelines, storage choices, ANN index lifecycle, latency budgets per query stage, observability, and a deployment matrix that maps each component to cost-optimized and quality-optimized choices.
