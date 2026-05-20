@@ -13,7 +13,7 @@ title                    : "Partha Chakraborty"
 title_separator          : "-"
 name                     : &name "Partha Chakraborty"
 description              : &description "Applied Scientist specializing in retrieval, ranking, and search systems. Research in learning-to-rank, hybrid search, and embedding model training."
-url                      : https://parthac.me/ # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
+url                      : https://parthac.me # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "partha117/academicpages.github.io"
 
