@@ -2,6 +2,7 @@
 title: "Building It in Production: System Architecture for High-Precision Legal Retrieval"
 date: 2026-05-19
 permalink: /posts/2026/system-architecture-legal-retrieval/
+description: "Production architecture for a four-plane legal retrieval system: ingestion pipeline, storage layout, per-stage latency budgets, service-level concerns, and graceful degradation."
 tags:
   - retrieval
   - RAG

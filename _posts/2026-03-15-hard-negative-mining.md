@@ -2,6 +2,7 @@
 title: "What Hard Negative Mining Actually Means in Practice"
 date: 2026-03-15
 permalink: /posts/2026/hard-negative-mining/
+description: "Why random negatives fail for fine-grained retrieval, and what actually works: semi-hard negatives, cross-encoder filtering, margin-based loss, and curriculum training."
 tags:
   - search
   - embeddings

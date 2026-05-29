@@ -2,6 +2,7 @@
 title: "Structure-First Retrieval: The Legal Case"
 date: 2026-05-10
 permalink: /posts/2026/structure-first-retrieval/
+description: "A four-plane retrieval architecture — lexical, dense, structural graph, and symbolic — that fixes the six failure modes of hybrid retrieval on legal corpora, with formal analysis of why it dominates BM25 + dense."
 tags:
   - retrieval
   - RAG

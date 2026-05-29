@@ -2,6 +2,7 @@
 title: "Why Hybrid Retrieval Fails on Legal Corpora"
 date: 2026-04-19
 permalink: /posts/2026/why-hybrid-retrieval-fails/
+description: "Six specific failure modes of BM25 + dense + reranker pipelines on legal text — version drift, missing exceptions, load-bearing words, jurisdiction bleed, temporal arithmetic, and false confidence — illustrated on 11 U.S.C. § 547."
 tags:
   - retrieval
   - RAG
